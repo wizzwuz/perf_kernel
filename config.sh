@@ -126,11 +126,13 @@ elif
 	echo "CONFIG_HAVE_KPROBES=y" >> $DEVICE_DEFCONFIG_FILE
 	echo "CONFIG_KPROBE_EVENTS=y" >> $DEVICE_DEFCONFIG_FILE
         echo "CONFIG_KSU_SUSFS=y" >> $DEVICE_DEFCONFIG_FILE
+		echo "CONFIG_KPM=y" >> $DEVICE_DEFCONFIG_FILE
         msg "Hook patches not found! Using kprobes..."
     else
     	echo "CONFIG_KSU=y" >> $DEVICE_DEFCONFIG_FILE
     	echo "CONFIG_KSU_SUSFS=y" >> $DEVICE_DEFCONFIG_FILE
     	echo "CONFIG_KPROBES=n" >> $DEVICE_DEFCONFIG_FILE # it will conflict with KSU hooks if it's on
+	    echo "CONFIG_KPM=y" >> $DEVICE_DEFCONFIG_FILE
     fi
 
     KSU_GIT_VERSION=$(cd KernelSU && git rev-list --count HEAD)
