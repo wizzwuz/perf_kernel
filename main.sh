@@ -6,7 +6,7 @@
 # Kernel
 KERNEL_NAME="Perf"
 KERNEL_GIT="https://github.com/wizzwuz/kernel_xiaomi_violet.git"
-KERNEL_BRANCH="magic"
+KERNEL_BRANCH="main"
 
 # KernelSU
 KERNELSU_REPO="selfmusing/USlenreK"
