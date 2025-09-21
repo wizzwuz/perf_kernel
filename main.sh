@@ -112,7 +112,8 @@ msg() {
 	echo
 }
 
-cd $WORKDIR
+cd $WORKDIR && pwd
+echo "$WORKDIR"
 
 # Setup
 msg "Setup"
